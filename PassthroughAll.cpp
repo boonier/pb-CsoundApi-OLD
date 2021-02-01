@@ -46,39 +46,38 @@ PassthroughAll::getAudioInNames(std::vector<std::string>& vec){
 
 void 
 PassthroughAll::getAudioOutNames(std::vector<std::string>& vec){
-//	vec.push_back("Passthrough audio out");
-//	vec.push_back("Combien tu les vends tes crayons?"); //don't ask... it's a running gag here
-//	vec.push_back("audio file 1st channels");
+	vec.push_back("row 1");
+    vec.push_back("row 2");
+    vec.push_back("row 3");
+    vec.push_back("row 4");
+    vec.push_back("row 5");
+    vec.push_back("row 6");
+    vec.push_back("row 7");
+    vec.push_back("row 8");
 }
 
 void 
 PassthroughAll::getMIDIInNames(std::vector<std::string>& vec){
-	vec.push_back("Passthrough MIDI in");
 }
 
 void 
 PassthroughAll::getMIDIOutNames(std::vector<std::string>& vec){
-	vec.push_back("Passthrough MIDI out");
 }
 
 void 
 PassthroughAll::getFreqInNames(std::vector<std::string>& vec){
-	vec.push_back("Passthrough frequency in");
 }
 
 void 
 PassthroughAll::getFreqOutNames(std::vector<std::string>& vec){
-	vec.push_back("Passthrough frequency out");
 }
 
 void 
 PassthroughAll::getMagInNames(std::vector<std::string>& vec){
-	vec.push_back("Passthrough magnitude in");
 }
 
 void 
 PassthroughAll::getMagOutNames(std::vector<std::string>& vec){
-	vec.push_back("Passthrough magnitude out");
 }
 
 void 
