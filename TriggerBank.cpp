@@ -1,5 +1,5 @@
 
-#include "PassthroughAll.h"
+#include "TriggerBank.h"
 #include <iostream>
 #include <string>
 
@@ -7,7 +7,7 @@ using namespace plogue::biduleSDK;
 using namespace acme;
 using namespace std;
 
-PassthroughAll::PassthroughAll(BiduleHost* host):
+TriggerBank::TriggerBank(BiduleHost* host):
 BidulePlugin(host){
 	//fill in plugin capabilities as a mask
 //  _caps = CAP_SYNCMASTER | CAP_SYNCSLAVE
@@ -30,22 +30,22 @@ BidulePlugin(host){
 	_dumbAFCounter = 0;
 }
 
-PassthroughAll::~PassthroughAll(){
+TriggerBank::~TriggerBank(){
 }
 
 bool
-PassthroughAll::init() {
+TriggerBank::init() {
     return true;
 }
 
 void 
-PassthroughAll::getAudioInNames(std::vector<std::string>& vec){
+TriggerBank::getAudioInNames(std::vector<std::string>& vec){
 	vec.push_back("trigger");
     vec.push_back("reset");
 }
 
 void 
-PassthroughAll::getAudioOutNames(std::vector<std::string>& vec){
+TriggerBank::getAudioOutNames(std::vector<std::string>& vec){
 	vec.push_back("row 1");
     vec.push_back("row 2");
     vec.push_back("row 3");
@@ -57,31 +57,31 @@ PassthroughAll::getAudioOutNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getMIDIInNames(std::vector<std::string>& vec){
+TriggerBank::getMIDIInNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getMIDIOutNames(std::vector<std::string>& vec){
+TriggerBank::getMIDIOutNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getFreqInNames(std::vector<std::string>& vec){
+TriggerBank::getFreqInNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getFreqOutNames(std::vector<std::string>& vec){
+TriggerBank::getFreqOutNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getMagInNames(std::vector<std::string>& vec){
+TriggerBank::getMagInNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getMagOutNames(std::vector<std::string>& vec){
+TriggerBank::getMagOutNames(std::vector<std::string>& vec){
 }
 
 void 
-PassthroughAll::getParametersInfos(ParameterInfo* pinfos) {
+TriggerBank::getParametersInfos(ParameterInfo* pinfos) {
 
 //	pinfos[0].id = 0;
 //	strcpy(pinfos[0].name, "dummy parameter");
@@ -172,11 +172,11 @@ PassthroughAll::getParametersInfos(ParameterInfo* pinfos) {
 }
 
 void 
-PassthroughAll::getParameterChoices(long id, std::vector<std::string>& vec) {
+TriggerBank::getParameterChoices(long id, std::vector<std::string>& vec) {
 }
 
 void 
-PassthroughAll::parameterUpdate(long id){
+TriggerBank::parameterUpdate(long id){
 	if(id == 0)
 		getParameterValue(0, _dParamValue);
 	if(id == 1) {
@@ -194,7 +194,7 @@ PassthroughAll::parameterUpdate(long id){
 }
 
 void 
-PassthroughAll::process(Sample** sampleIn, Sample** sampleOut, MIDIEvents* midiIn, MIDIEvents* midiOut, Frequency*** freqIn, Frequency*** freqOut, 
+TriggerBank::process(Sample** sampleIn, Sample** sampleOut, MIDIEvents* midiIn, MIDIEvents* midiOut, Frequency*** freqIn, Frequency*** freqOut, 
 						Magnitude*** magIn, Magnitude*** magOut, SyncInfo* syncIn, SyncInfo* syncOut){
 	
 	//VC6 has scope problems with for loop indices

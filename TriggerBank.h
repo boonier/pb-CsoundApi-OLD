@@ -8,11 +8,11 @@ using namespace std;
 
 namespace acme {
     using namespace plogue::biduleSDK;
-    class PassthroughAll: public BidulePlugin {
+    class TriggerBank: public BidulePlugin {
 
 	    public:
-		    PassthroughAll(BiduleHost* host);
-			virtual ~PassthroughAll();
+		    TriggerBank(BiduleHost* host);
+			virtual ~TriggerBank();
             virtual bool init();
 			virtual void getAudioInNames(std::vector<std::string>& vec);
 			virtual void getAudioOutNames(std::vector<std::string>& vec);
