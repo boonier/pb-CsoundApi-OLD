@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9626A793095321AC006C620D"
-               BuildableName = "SDKExample.bundle"
-               BlueprintName = "SDKExample (Upgraded)"
-               ReferencedContainer = "container:SDKExample.xcodeproj">
+               BuildableName = "TriggerBank.bundle"
+               BlueprintName = "TriggerBank (Upgraded)"
+               ReferencedContainer = "container:TriggerBank.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9626A793095321AC006C620D"
-            BuildableName = "SDKExample.bundle"
-            BlueprintName = "SDKExample (Upgraded)"
-            ReferencedContainer = "container:SDKExample.xcodeproj">
+            BuildableName = "TriggerBank.bundle"
+            BlueprintName = "TriggerBank (Upgraded)"
+            ReferencedContainer = "container:TriggerBank.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9626A793095321AC006C620D"
-            BuildableName = "SDKExample.bundle"
-            BlueprintName = "SDKExample (Upgraded)"
-            ReferencedContainer = "container:SDKExample.xcodeproj">
+            BuildableName = "TriggerBank.bundle"
+            BlueprintName = "TriggerBank (Upgraded)"
+            ReferencedContainer = "container:TriggerBank.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

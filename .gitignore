@@ -1,4 +1,11 @@
-build
-SDKExample.xcodeproj/rootsix.mode1v3
-SDKExample.xcodeproj/rootsix.pbxuser
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+
+# old skool
+.svn
+
+# osx noise
 .DS_Store
+profile

@@ -23,9 +23,9 @@ DLLExport ErrorCode fillBiduleInfo(unsigned long biduleIdx, BidulePluginInfo* bi
 	//wrong with some error handling mechanisms
 	switch(biduleIdx) {
 		case 0:
-			strcpy(biduleInfo->type, "com.acme.PassthroughAll");
-			strcpy(biduleInfo->name, "Passthrough");
-			strcpy(biduleInfo->fullName, "Misc\tPassthrough");
+			strcpy(biduleInfo->type, "com.acme.TriggerBank");
+			strcpy(biduleInfo->name, "TriggerBank");
+			strcpy(biduleInfo->fullName, "*rootsix\tTriggerBank");
 			return BSDK_NO_ERROR;
 		break;
 
@@ -37,7 +37,7 @@ DLLExport ErrorCode fillBiduleInfo(unsigned long biduleIdx, BidulePluginInfo* bi
 
 DLLExport BidulePluginStruct* newInstance(const char* type, BiduleHost* host) {
 
-    if( strcmp(type, "com.acme.PassthroughAll") == 0) {
+    if( strcmp(type, "com.acme.TriggerBank") == 0) {
 		BidulePlugin* bp = new PassthroughAll(host);
 		return bp->getBidulePluginStruct();
 	} else 
