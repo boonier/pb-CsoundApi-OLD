@@ -7,7 +7,7 @@
 #endif
 
 #include "../common/BiduleSDK.h"
-#include "PassthroughAll.h"
+#include "TriggerBank.h"
 
 using namespace plogue::biduleSDK;
 using namespace acme;
@@ -38,7 +38,7 @@ DLLExport ErrorCode fillBiduleInfo(unsigned long biduleIdx, BidulePluginInfo* bi
 DLLExport BidulePluginStruct* newInstance(const char* type, BiduleHost* host) {
 
     if( strcmp(type, "com.acme.TriggerBank") == 0) {
-		BidulePlugin* bp = new PassthroughAll(host);
+		BidulePlugin* bp = new TriggerBank(host);
 		return bp->getBidulePluginStruct();
 	} else 
         return NULL;

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9626A795095321AC006C620D /* BiduleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 969BD84F04FFA36800A80165 /* BiduleSDK.h */; };
-		9626A797095321AC006C620D /* PassthroughAll.h in Headers */ = {isa = PBXBuildFile; fileRef = 969BD85504FFA37800A80165 /* PassthroughAll.h */; };
+		9626A797095321AC006C620D /* TriggerBank.h in Headers */ = {isa = PBXBuildFile; fileRef = 969BD85504FFA37800A80165 /* TriggerBank.h */; };
 		9626A799095321AC006C620D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		9626A79B095321AC006C620D /* BiduleSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969BD84E04FFA36800A80165 /* BiduleSDK.cpp */; };
-		9626A79C095321AC006C620D /* PassthroughAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969BD85404FFA37800A80165 /* PassthroughAll.cpp */; };
+		9626A79C095321AC006C620D /* TriggerBank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969BD85404FFA37800A80165 /* TriggerBank.cpp */; };
 		9626A79D095321AC006C620D /* SDKExampleMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969BD85804FFA38400A80165 /* SDKExampleMain.cpp */; };
 		9626A79F095321AC006C620D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
 /* End PBXBuildFile section */
@@ -23,8 +23,8 @@
 		969BD84E04FFA36800A80165 /* BiduleSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = BiduleSDK.cpp; path = ../common/BiduleSDK.cpp; sourceTree = SOURCE_ROOT; };
 		969BD84F04FFA36800A80165 /* BiduleSDK.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 30; name = BiduleSDK.h; path = ../common/BiduleSDK.h; sourceTree = SOURCE_ROOT; };
 		969BD85004FFA36800A80165 /* BiduleTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BiduleTypes.h; path = ../common/BiduleTypes.h; sourceTree = SOURCE_ROOT; };
-		969BD85404FFA37800A80165 /* PassthroughAll.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = PassthroughAll.cpp; sourceTree = SOURCE_ROOT; };
-		969BD85504FFA37800A80165 /* PassthroughAll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 30; path = PassthroughAll.h; sourceTree = SOURCE_ROOT; };
+		969BD85404FFA37800A80165 /* TriggerBank.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TriggerBank.cpp; sourceTree = SOURCE_ROOT; };
+		969BD85504FFA37800A80165 /* TriggerBank.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 30; path = TriggerBank.h; sourceTree = SOURCE_ROOT; };
 		969BD85804FFA38400A80165 /* SDKExampleMain.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = SDKExampleMain.cpp; sourceTree = SOURCE_ROOT; };
 		B2473DC225C1C52B00DAE97C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,8 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				969BD84D04FFA34700A80165 /* Common */,
-				969BD85404FFA37800A80165 /* PassthroughAll.cpp */,
-				969BD85504FFA37800A80165 /* PassthroughAll.h */,
+				969BD85404FFA37800A80165 /* TriggerBank.cpp */,
+				969BD85504FFA37800A80165 /* TriggerBank.h */,
 				969BD85804FFA38400A80165 /* SDKExampleMain.cpp */,
 			);
 			name = Source;
@@ -106,7 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9626A795095321AC006C620D /* BiduleSDK.h in Headers */,
-				9626A797095321AC006C620D /* PassthroughAll.h in Headers */,
+				9626A797095321AC006C620D /* TriggerBank.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9626A79B095321AC006C620D /* BiduleSDK.cpp in Sources */,
-				9626A79C095321AC006C620D /* PassthroughAll.cpp in Sources */,
+				9626A79C095321AC006C620D /* TriggerBank.cpp in Sources */,
 				9626A79D095321AC006C620D /* SDKExampleMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
