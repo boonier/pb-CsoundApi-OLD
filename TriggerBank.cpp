@@ -177,9 +177,13 @@ TriggerBank::getParameterChoices(long id, std::vector<std::string>& vec) {
 
 void 
 TriggerBank::parameterUpdate(long id){
+
+    cout << id << endl;
+    
 	if(id == 0)
 		getParameterValue(0, _dParamValue);
-	if(id == 1) {
+	
+    if(id == 1) {
 		_afConnected = false;
 		_dumbAFCounter = 0;
 		std::string filename;
@@ -188,9 +192,12 @@ TriggerBank::parameterUpdate(long id){
 		if(_af.numChannels != 0)
 			_afConnected = true;
 	}
-	if(id == 3){
+	
+    if(id == 3)
 		getParameterValue(3, _mrcbValue);
-	}
+	
+    
+    
 }
 
 void 
