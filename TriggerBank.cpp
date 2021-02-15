@@ -176,25 +176,28 @@ TriggerBank::getParameterChoices(long id, std::vector<std::string>& vec) {
 }
 
 void 
-TriggerBank::parameterUpdate(long id){
-
-    cout << id << endl;
+TriggerBank::parameterUpdate(long id) {
     
-	if(id == 0)
-		getParameterValue(0, _dParamValue);
-	
-    if(id == 1) {
-		_afConnected = false;
-		_dumbAFCounter = 0;
-		std::string filename;
-		getParameterValue(1, filename);
-		getAudioFile(1, filename, &_af);
-		if(_af.numChannels != 0)
-			_afConnected = true;
-	}
-	
-    if(id == 3)
-		getParameterValue(3, _mrcbValue);
+    for (int i = 0; i < _numParams; i++) {
+        if (i == id)
+            cout << id << endl;
+    }
+    
+//	if(id == 0)
+//		getParameterValue(0, _dParamValue);
+//
+//    if(id == 1) {
+//		_afConnected = false;
+//		_dumbAFCounter = 0;
+//		std::string filename;
+//		getParameterValue(1, filename);
+//		getAudioFile(1, filename, &_af);
+//		if(_af.numChannels != 0)
+//			_afConnected = true;
+//	}
+//
+//    if(id == 3)
+//		getParameterValue(3, _mrcbValue);
 	
     
     
