@@ -30,11 +30,7 @@ namespace acme {
 			virtual void process(Sample** sampleIn, Sample** sampleOut, MIDIEvents* midiIn, MIDIEvents* midiOut, Frequency*** freqIn, Frequency*** freqOut, Magnitude*** magIn, Magnitude*** magOut, SyncInfo* syncIn, SyncInfo* syncOut);
 		
         protected:
-			double _dParamValue;
-			double _mrcbValue;
-			AudioFile _af;
-			bool _afConnected;
-			unsigned long _dumbAFCounter;
+            int * _bankValues;
     };
 };
 

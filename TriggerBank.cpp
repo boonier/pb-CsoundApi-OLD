@@ -25,9 +25,7 @@ BidulePlugin(host){
     _numUIColumns=18;
 	_numParams=_numUIColumns * 8;
     
-	_dParamValue = 0.0;
-	_afConnected = false;
-	_dumbAFCounter = 0;
+    _bankValues = new int[_numParams];
 }
 
 TriggerBank::~TriggerBank(){
@@ -180,8 +178,13 @@ TriggerBank::parameterUpdate(long id) {
     
     for (int i = 0; i < _numParams; i++) {
         if (i == id)
-            cout << id << endl;
+            getParameterValue(id, _bankValues[i]);
+//
+        cout << _bankValues[i] << endl;
+        
     }
+    
+    
     
 //	if(id == 0)
 //		getParameterValue(0, _dParamValue);
@@ -219,27 +222,27 @@ TriggerBank::process(Sample** sampleIn, Sample** sampleOut, MIDIEvents* midiIn, 
 	for(i = 0; i < _numAudioIns; ++i)
 		memcpy(sampleOut[i], sampleIn[i], _dspInfo.bufferSize * sizeof(Sample));
 
-	long sampleFrames = _dspInfo.bufferSize;
-	float paramValf = (float)_dParamValue;
+//	long sampleFrames = _dspInfo.bufferSize;
+//	float paramValf = (float)_dParamValue;
 	
-	Sample* s1 = sampleOut[1];
-	while(--sampleFrames >= 0)
-		(*s1++) = paramValf;
+//	Sample* s1 = sampleOut[1];
+//	while(--sampleFrames >= 0)
+//		(*s1++) = paramValf;
 		
 		
-	Sample* s2 = sampleOut[2];
-	if(!_afConnected)
-		memset(s2, 0, _dspInfo.bufferSize * sizeof(Sample));
-	else {
-		sampleFrames = _dspInfo.bufferSize;
-		while(--sampleFrames >= 0) {
+//	Sample* s2 = sampleOut[2];
+//	if(!_afConnected)
+//		memset(s2, 0, _dspInfo.bufferSize * sizeof(Sample));
+//	else {
+//		sampleFrames = _dspInfo.bufferSize;
+//		while(--sampleFrames >= 0) {
 			//dumb, dumb
-			if(_dumbAFCounter >= _af.numSamples)
-				_dumbAFCounter = 0;
-				(*s2++) = _af.channels[0][_dumbAFCounter];
-				_dumbAFCounter++;
-		}
-	}
+//			if(_dumbAFCounter >= _af.numSamples)
+//				_dumbAFCounter = 0;
+//				(*s2++) = _af.channels[0][_dumbAFCounter];
+//				_dumbAFCounter++;
+//		}
+//	}
 
 	for(i = 0; i < _numMIDIIns; ++i) {
 		midiOut[i].numEvents = midiIn[i].numEvents;
