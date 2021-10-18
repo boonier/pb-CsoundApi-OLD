@@ -7,7 +7,7 @@
 #endif
 
 #include "../common/BiduleSDK.h"
-#include "TriggerBank.h"
+#include "CsoundTest.h"
 
 using namespace plogue::biduleSDK;
 using namespace acme;
@@ -23,9 +23,9 @@ DLLExport ErrorCode fillBiduleInfo(unsigned long biduleIdx, BidulePluginInfo* bi
 	//wrong with some error handling mechanisms
 	switch(biduleIdx) {
 		case 0:
-			strcpy(biduleInfo->type, "com.acme.TriggerBank");
-			strcpy(biduleInfo->name, "TriggerBank");
-			strcpy(biduleInfo->fullName, "*rootsix\tTriggerBank");
+			strcpy(biduleInfo->type, "com.acme.CsoundTest");
+			strcpy(biduleInfo->name, "CsoundTest");
+			strcpy(biduleInfo->fullName, "*rootsix\tplugins\tCsoundTest");
 			return BSDK_NO_ERROR;
 		break;
 
@@ -37,8 +37,8 @@ DLLExport ErrorCode fillBiduleInfo(unsigned long biduleIdx, BidulePluginInfo* bi
 
 DLLExport BidulePluginStruct* newInstance(const char* type, BiduleHost* host) {
 
-    if( strcmp(type, "com.acme.TriggerBank") == 0) {
-		BidulePlugin* bp = new TriggerBank(host);
+    if( strcmp(type, "com.acme.CsoundTest") == 0) {
+		BidulePlugin* bp = new CsoundTest(host);
 		return bp->getBidulePluginStruct();
 	} else 
         return NULL;

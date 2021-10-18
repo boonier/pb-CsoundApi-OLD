@@ -3,16 +3,18 @@
 
 #include "../common/BiduleSDK.h"
 #include <string>
+#include "CsoundLib64/csound.hpp"
+
 
 using namespace std;
 
 namespace acme {
     using namespace plogue::biduleSDK;
-    class TriggerBank: public BidulePlugin {
+    class CsoundTest: public BidulePlugin {
 
 	    public:
-		    TriggerBank(BiduleHost* host);
-			virtual ~TriggerBank();
+		    CsoundTest(BiduleHost* host);
+			virtual ~CsoundTest();
             virtual bool init();
 			virtual void getAudioInNames(std::vector<std::string>& vec);
 			virtual void getAudioOutNames(std::vector<std::string>& vec);
@@ -30,7 +32,11 @@ namespace acme {
 			virtual void process(Sample** sampleIn, Sample** sampleOut, MIDIEvents* midiIn, MIDIEvents* midiOut, Frequency*** freqIn, Frequency*** freqOut, Magnitude*** magIn, Magnitude*** magOut, SyncInfo* syncIn, SyncInfo* syncOut);
 		
         protected:
-            int * _bankValues;
+            //Create an instance of Csound
+            Csound* csound;
+            string csoundText;
+            MYFLT *spin;
+            MYFLT *spout;
     };
 };
 
