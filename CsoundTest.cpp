@@ -35,26 +35,6 @@ bool CsoundTest::init() {
     cout << "Init CsoundTest" << endl;
     csound = new Csound();
     cout << csound << endl;
-    
-//    csoundText = "<CsoundSynthesizer>\n"
-//    "<CsOptions>\n"
-//    "csound -b256 -B512 -+rtaudio=pa_cb -iadc0 -odac0"
-//    "</CsOptions>\n"
-//    "<CsInstruments>\n"
-//    "sr = 44100\n"
-//    "ksmps = 64\n    "
-//    "nchnls = 2\n"
-//    "0dbfs = 1\n"
-//    "instr 1\n"
-//    "a1 oscili 1, 300, 1\n"
-//    "outs a1, a1\n"
-//    "endin\n"
-//    "</CsInstruments>\n"
-//    "<CsScore>\n"
-//    "f1 0 1024 10 1\n"
-//    "i1 0 2\n"
-//    "</CsScore>\n"
-//    "</CsoundSynthesizer>\n";
     cout << "version:" << csound->GetVersion() << endl;
     cout << "api version:" << csound->GetAPIVersion() << endl;
     
@@ -69,13 +49,12 @@ bool CsoundTest::init() {
         
         //start Csound performance
         csound->Start();
-        
+        cout << "Successful CSD compile, starting..." << endl;
         return true;
     } else {
+        cout << "CSD did not compile" << endl;
         return false;
     }
-
-    
 
 }
 
